@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'dart:math' as math;
 
 import '../controllers/home_controller.dart';
+import '../widgets/custom_icon_widget.dart';
+import '../widgets/custom_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   final HomeController controller = Get.put(HomeController());
@@ -20,6 +22,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              //PLACE
+
               SizedBox(height: 21.0),
               Align(
                 alignment: Alignment.centerLeft,
@@ -33,6 +37,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //DATE
+
               SizedBox(height: 13.0),
               Align(
                 alignment: Alignment.centerLeft,
@@ -65,6 +72,8 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 24.0),
               Container(
+                //IMAGE
+
                 width: MediaQuery.of(context).size.width,
                 height: 136,
                 decoration: BoxDecoration(
@@ -105,11 +114,14 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                    //DAY OR NIGHT
+
                     Padding(
                       padding: EdgeInsets.only(
                           left: math.max(80 + controller.xOffset.value, 0)),
                       child: Image.asset(
-                        'assets/images/night.png',
+                        'assets/images/day.png',
                         width: 180,
                         height: 180,
                         alignment: Alignment.centerLeft,
@@ -118,6 +130,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              //TEMP MIN AND MAX
+
               SizedBox(height: 24.0),
               Align(
                 alignment: Alignment.centerLeft,
@@ -131,6 +146,8 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      //MIN TEMP
+
                       Padding(
                         padding: EdgeInsets.only(left: 32, top: 17),
                         child: RichText(
@@ -176,6 +193,9 @@ class HomeScreen extends StatelessWidget {
                         thickness: 1,
                         width: 90, // Adjust the width of the divider
                       ),
+
+                      //MAX TEMP
+
                       Padding(
                         padding: EdgeInsets.only(right: 32, top: 20),
                         child: Text(
@@ -220,6 +240,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //WEATHER FORECAST
+
               SizedBox(height: 24.0),
               Align(
                 alignment: Alignment.centerLeft,
@@ -264,221 +287,183 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(36.0),
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xFFFF7D3D),
-                                        Color(0xFFFF3635),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 32, top: 0),
-                                    child: Text(
-                                      AppStrings.time,
-                                      style: TextStyle(
-                                          color: Color(0xFF878787),
-                                          fontSize: 8,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400),
-                                    ))
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(36.0),
-                                      color: Color(0xFF606060)),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 0),
-                                  child: Text(
-                                    AppStrings.time,
-                                    style: TextStyle(
-                                        color: Color(0xFF878787),
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(36.0),
-                                      color: Color(0xFF606060)),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 0),
-                                  child: Text(
-                                    AppStrings.time,
-                                    style: TextStyle(
-                                        color: Color(0xFF878787),
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(36.0),
-                                      color: Color(0xFF606060)),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 0),
-                                  child: Text(
-                                    AppStrings.time,
-                                    style: TextStyle(
-                                        color: Color(0xFF878787),
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(36.0),
-                                      color: Color(0xFF606060)),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 0),
-                                  child: Text(
-                                    AppStrings.time,
-                                    style: TextStyle(
-                                        color: Color(0xFF878787),
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 32.0, top: 16),
-                                  width: 72.0,
-                                  height: 157.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(36.0),
-                                      color: Color(0xFF606060)),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 8),
-                                  child: Text(
-                                    AppStrings.shortDate,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 32, top: 0),
-                                  child: Text(
-                                    AppStrings.time,
-                                    style: TextStyle(
-                                        color: Color(0xFF878787),
-                                        fontSize: 8,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            CustomCardWidget(),
+                            CustomCardWidget(),
+                            CustomCardWidget(),
+                            CustomCardWidget(),
+                            SizedBox(width: 32),
                           ],
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+
+               //WEATHER DETAILS
+              SizedBox(height: 24.0),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 370,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Color(0xFF282828),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 32,right: 32,top: 32,bottom: 32), // Adjust the horizontal padding as needed
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            CustomIconWidget(
+                              imagePath: 'assets/images/pressure.png',
+                              text1: '115hpa',
+                              text2: AppStrings.pressure,
+                            ),
+                            SizedBox(width: 72.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/humidity.png',
+                              text1: '64%',
+                              text2: AppStrings.humidity,
+                            ),
+                            SizedBox(width: 72.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/visibility.png',
+                              text1: '10km',
+                              text2: AppStrings.visibility,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 40.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            CustomIconWidget(
+                              imagePath: 'assets/images/wind.png',
+                              text1: '2.2km/h',
+                              text2: AppStrings.wind
+                              ,
+                            ),
+                            SizedBox(width: 72.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/clouds.png',
+                              text1: '50%',
+                              text2: AppStrings.clouds,
+                            ),
+                            SizedBox(width: 72.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/rains.png',
+                              text1: '3.53mm',
+                              text2: AppStrings.rain,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 40.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            CustomIconWidget(
+                              imagePath: 'assets/images/sea_level.png',
+                              text1: '1015hpa',
+                              text2: AppStrings.seaLevel,
+                            ),
+                            SizedBox(width: 72.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/ground_level.png',
+                              text1: '933hpa',
+                              text2: AppStrings.grndLevel,
+                            ),
+                            SizedBox(width: 44.0),
+                            CustomIconWidget(
+                              imagePath: 'assets/images/precipitation.png',
+                              text1: '0',
+                              text2: AppStrings.precipitation,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              //SUNRISE SUNSET
+
+              SizedBox(height: 24.0),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 128,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Color(0xFF282828),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                        bottom: 16, top: 20, left: 10, right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              AppStrings.time,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Poppins',
+                                color: Color(0xFFffffff),
+                              ),
+                            ),
+                            Text(
+                              AppStrings.sunRise,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF878787),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(width: 20.0),
+                        Image.asset(
+                          'assets/images/sunrise_sunset.png',
+                          alignment: Alignment.center,
+                          height: 95,
+                          width: 150,
+                        ),
+                        SizedBox(width: 20.0),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              AppStrings.time,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Poppins',
+                                color: Color(0xFFffffff),
+                              ),
+                            ),
+                            Text(
+                              AppStrings.sunSet,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF878787),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

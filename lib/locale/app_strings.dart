@@ -46,5 +46,16 @@ class AppStrings {
   static const String tempText = "Temp";
   static const String min = "Min";
   static const String max = "Max";
+  static const String sunRise = "sunrise";
+  static const String sunSet = "sunset";
+  static const String pressure = "pressure";
+  static const String humidity = "humidity";
+  static const String visibility = "visibility";
+  static const String wind = "wind";
+  static const String clouds = "clouds";
+  static const String rain = "rain";
+  static const String seaLevel = "sea level";
+  static const String grndLevel = '''ground level''';
+  static const String precipitation = '''precipitation''';
 
 }

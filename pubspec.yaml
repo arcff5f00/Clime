@@ -79,6 +79,16 @@ flutter:
     - assets/images/broken_clouds.png
     - assets/images/day.png
     - assets/images/night.png
+    - assets/images/clouds.png
+    - assets/images/ground_level.png
+    - assets/images/humidity.png
+    - assets/images/precipitation.png
+    - assets/images/pressure.png
+    - assets/images/rains.png
+    - assets/images/sea_level.png
+    - assets/images/sunrise_sunset.png
+    - assets/images/visibility.png
+    - assets/images/wind.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

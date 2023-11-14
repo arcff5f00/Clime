@@ -53,4 +53,3 @@ class HomeController extends GetxController {
   }
 }
 
-// The rest of your code remains unchanged...

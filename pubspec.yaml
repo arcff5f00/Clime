@@ -34,6 +34,9 @@ dependencies:
   shared_preferences: ^2.0.9
   flutter_localizations:
     sdk: flutter
+  http: ^0.13.3
+  intl:
+  geolocator: ^7.7.0
   sensors_plus:
 
 
